@@ -1,0 +1,140 @@
+*{
+    font-size: 20px;
+    overflow-x:hidden;
+}
+#bg{
+    /* background-image:image("fandango-essential-movies.png"); */
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    filter: grayscale(25%);
+}
+.navitems{
+    list-style:none;
+}
+.navcont{
+    color: white;
+    background-color:rgb(32, 53, 157);
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    height: 105px;
+    width:100%;
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+
+}
+.navitems{
+    /* text-decoration: none; */
+    margin: 0px 25px 15px 25px;
+    color: white;
+    background-color: transparent;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: auto;
+    
+}
+input{
+    color:black;
+    margin-right: 50px;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+#logo{
+    filter:saturate(50);
+    /* filter:contrast(0); */
+    /* margin-right: 962px; */
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: transparent;
+}
+a:link,a:visited{
+    color: white;
+    text-decoration: none; 
+}
+.navitems a:hover{
+    background-color:white;
+    color: rgb(32, 53, 157);
+}
+h1{
+    font-size: 2.5em;
+    color: white;
+}
+.boxes{
+    list-style: none;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 250px;
+    width: 0.1fr;
+    
+}
+.boxcont{
+    border: 4px solid white;
+    border-radius: 15px;
+    /* margin: 0px 50px 0px 50px; */
+    margin:auto;
+    padding: 108px;
+    background-color: black;
+    opacity: 0.65;
+    /* text-align: center; */
+    
+}
+.user_input{
+     margin-top: 110px;
+     margin-left: 25vw;
+     background-color: rgb(0,0,0,0.5);
+     width: 800px;
+     padding: 50px;
+     font-family: 'Ubuntu', sans-serif;
+     border: 1px;
+     border-color: white;
+}
+p{
+    text-align: center;
+    color:white;
+}
+
+button {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  font-family: 'Ubuntu', sans-serif;
+  cursor: pointer;
+  padding: 14px 60px;
+}
+
+.w3-select{margin-top: 20px; margin-left: 120px; padding:4px 0;width:70%;border:none;border-bottom:1px solid #ccc}
+
+#about{
+     margin-top: 200px;
+     margin-left: 150px;
+     background-color: rgb(0,0,0,0.5);
+     width: 75%;
+     padding: 50px;
+}
+#background{
+    background-color: rgb(0,0,0,0.5);
+    /* width: 100%;
+    height:70%; */
+    height: 100vh;
+    /* Set the width to match that of the viewport. */
+    width: 100vw;
+
+    /* Remove any browser-default margins. */
+    margin: 0;
+}
