@@ -14,9 +14,47 @@
 <body text="white">
     <nav id="nav">
         <ul class="navcont">
-            <li class="navitems">
-                <input type="text" onfocus="this.value=''" value="Search" id="search">
-            </li>
+            <li class="navitems"><button class="loginbtn" onclick="document.getElementById('id02').style.display='block'" style="width: 90px;
+            margin: auto; padding: 8px; background-color: rgb(4, 4, 104); border-radius: 4px; font-size: 18px;">Login</button></li>
+            <div id="id02" class="modal2">
+  
+  <form class="modal-content2 animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close2" title="Close Modal">&times;</span>
+      <img src="avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container2">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container2" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Cancel</button>
+      <span class="psw2"><a href="#" style="color: black">Forgot password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
             <li class="navitems"><a href="contact.html">Contact Us</a></li>
             <li class="navitems"><a href="about.html">About</a></li>
             <li class="navitems"><a href="landing.html">Home</a></li>
@@ -28,12 +66,58 @@
     <img src="fandango-essential-movies.png" id="bg">
     <div id="background">
         <div class="user_input">
-            <form>
                 <h1 style="text-align: center;">WELCOME TO MovWizz!</h1>
+                <p>Create an account for a better experience and more personalized recommandations! 
+                <br><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button></p>
+
+          <div id="id01" class="modal">
+         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+         <form class="modal-content animate" action="/action_page.php">
+          <div class="container">
+      <h1>Sign Up</h1>
+      <p style="text-align: left;">Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p style="text-align: left;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
                 <h2 style="text-align: center;">Just a few details and we are ready to go..</h2>
-                Name:<input type="text" name="name" size="95">
+                <h3 style="text-align: center;">If you are looking for a recommendation only once and don't need to sign up, please enter your name and email! </h3>
+                <h3 style="text-align: left; color: red; font-size: 16px;">*If you have logged in, feel free to leave these two fields empty.</h3>
+                <form>
+                Name:<input type="text" name="name" size="95" placeholder="Enter Name">
                 
-                Email:<input type="text" name="email" size="95">
+                Email:<input type="text" name="email" size="95" placeholder="Enter Email">
                 <select class="w3-select" name="option">
                     <option value="" disabled selected>Choose a language</option>
                     <option value="1">English</option>
@@ -79,8 +163,18 @@
                     <input class="w3-check" type="checkbox">
                     <label>Drama</label>
                 </p>
+              </p>
+              Name a movie you have enjoyed watching in this genre before:<input type="text" name="film" placeholder="Enter Movie Name" size="95">
 
-                <button class="w3-btn w3-brown" style="margin-left: 330px">Submit</button></p>
+                <button class="w3-btn w3-brown" style="margin-left: 330px; border: none;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                font-family: 'Ubuntu', sans-serif;
+                cursor: pointer;
+                padding:14px 60px;">Submit</button></p>
             </form>
         </div>
     </div>
