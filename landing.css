@@ -1,140 +1,342 @@
+body {font-family: 'Ubuntu', sans-serif;}
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #333399;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity:0.9;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: black;
+  margin: 1% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50% /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+.cancelbtn2 {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container2 {
+  padding: 16px;
+}
+
+span.psw2 {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content2 {
+  background-color: black;
+  margin: 3% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close2 {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw2 {
+     display: block;
+     float: none;
+  }
+  .cancelbtn2 {
+     width: 100%;
+  }
+}
+
 *{
-    font-size: 20px;
-    overflow-x:hidden;
+  font-size: 20px;
+  overflow-x:hidden;
 }
 #bg{
-    /* background-image:image("fandango-essential-movies.png"); */
-    position: absolute;
-    top:0px;
-    left:0px;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.8;
-    filter: grayscale(25%);
+  /* background-image:image("fandango-essential-movies.png"); */
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.8;
+  filter: grayscale(25%);
 }
 .navitems{
-    list-style:none;
+  list-style:none;
 }
 .navcont{
-    color: white;
-    background-color:rgb(32, 53, 157);
-    list-style: none;
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    align-self: flex-end;
-    height: 105px;
-    width:100%;
-    font-family: 'Ubuntu', sans-serif;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 0px;
+  color: white;
+  background-color:rgb(32, 53, 157);
+  list-style: none;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-self: flex-end;
+  height: 105px;
+  width:100%;
+  font-family: 'Ubuntu', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 0px;
 
 }
 .navitems{
-    /* text-decoration: none; */
-    margin: 0px 25px 15px 25px;
-    color: white;
-    background-color: transparent;
-    font-family: 'Ubuntu', sans-serif;
-    margin-top: auto;
-    
+  /* text-decoration: none; */
+  margin: 0px 25px 15px 25px;
+  color: white;
+  background-color: transparent;
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: auto;
+  
 }
 input{
-    color:black;
-    margin-right: 50px;
-    font-size: 16px;
-    font-family: 'Ubuntu', sans-serif;
+  color:black;
+  margin-right: 50px;
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
 }
 #logo{
-    filter:saturate(50);
-    /* filter:contrast(0); */
-    /* margin-right: 962px; */
-    position: absolute;
-    top: 10px;
-    left: 0;
-    background: transparent;
+  filter:saturate(50);
+  /* filter:contrast(0); */
+  /* margin-right: 962px; */
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: transparent;
 }
 a:link,a:visited{
-    color: white;
-    text-decoration: none; 
+  color: white;
+  text-decoration: none; 
 }
 .navitems a:hover{
-    background-color:white;
-    color: rgb(32, 53, 157);
+  background-color:white;
+  color: rgb(32, 53, 157);
 }
 h1{
-    font-size: 2.5em;
-    color: white;
+  font-size: 2.5em;
+  color: white;
 }
 .boxes{
-    list-style: none;
-    font-family: 'Ubuntu', sans-serif;
-    color: white;
-    margin-top: 150px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    height: 250px;
-    width: 0.1fr;
-    
+  list-style: none;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  height: 250px;
+  width: 0.1fr;
+  
 }
 .boxcont{
-    border: 4px solid white;
-    border-radius: 15px;
-    /* margin: 0px 50px 0px 50px; */
-    margin:auto;
-    padding: 108px;
-    background-color: black;
-    opacity: 0.65;
-    /* text-align: center; */
-    
+  border: 4px solid white;
+  border-radius: 15px;
+  /* margin: 0px 50px 0px 50px; */
+  margin:auto;
+  padding: 108px;
+  background-color: black;
+  opacity: 0.65;
+  /* text-align: center; */
+  
 }
 .user_input{
-     margin-top: 110px;
-     margin-left: 25vw;
-     background-color: rgb(0,0,0,0.5);
-     width: 800px;
-     padding: 50px;
-     font-family: 'Ubuntu', sans-serif;
-     border: 1px;
-     border-color: white;
+   margin-top: 110px;
+   margin-left: 23vw;
+   background-color: rgb(0,0,0,0.5);
+   width: 1000px;
+   padding: 50px;
+   font-family: 'Ubuntu', sans-serif;
+   border: 1px;
+   border-color: white;
 }
 p{
-    text-align: center;
-    color:white;
+  text-align: center;
+  color:white;
 }
 
 button {
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  font-family: 'Ubuntu', sans-serif;
-  cursor: pointer;
-  padding: 14px 60px;
+border: none;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+font-family: 'Ubuntu', sans-serif;
+cursor: pointer;
+padding: 14px 60px;
 }
 
 .w3-select{margin-top: 20px; margin-left: 120px; padding:4px 0;width:70%;border:none;border-bottom:1px solid #ccc}
 
 #about{
-     margin-top: 200px;
-     margin-left: 150px;
-     background-color: rgb(0,0,0,0.5);
-     width: 75%;
-     padding: 50px;
+   margin-top: 200px;
+   margin-left: 150px;
+   background-color: rgb(0,0,0,0.5);
+   width: 75%;
+   padding: 50px;
 }
 #background{
-    background-color: rgb(0,0,0,0.5);
-    /* width: 100%;
-    height:70%; */
-    height: 100vh;
-    /* Set the width to match that of the viewport. */
-    width: 100vw;
+  background-color: rgb(0,0,0,0.5);
+  /* width: 100%;
+  height:70%; */
+  height: 100vh;
+  /* Set the width to match that of the viewport. */
+  width: 100vw;
 
-    /* Remove any browser-default margins. */
-    margin: 0;
+  /* Remove any browser-default margins. */
+  margin: 0;
 }
